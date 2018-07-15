@@ -18,7 +18,21 @@ func main() {
 
 
 /*
-http://tour.studygolang.com/moretypes/13
+
+range（续）
+	可以通过赋值给_来忽略序号和值。
+	如果只需要索引值，去掉“, value”的部分即可。
  */
 
+ 	pow1 := make([]int , 10)
+
+	for i := range pow1  {
+		pow1[i] = 1 << uint(i)
+
+	}
+	for _,value := range pow1{
+		fmt.Printf("%d\n", value)
+
+	}
+	
 }
