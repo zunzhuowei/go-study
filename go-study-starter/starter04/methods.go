@@ -1,8 +1,8 @@
 package main
 
 import (
-	"math"
 	"fmt"
+	"math"
 )
 
 type Vertex struct {
@@ -13,9 +13,9 @@ type Vertex struct {
 方法
 	Go 没有类。然而，仍然可以在结构体类型上定义方法。
 	方法接收者(v *Vertex) 出现在 func 关键字和方法名之间的参数中。
- */
-func (v *Vertex) Abs() float64{
-	return math.Sqrt(v.X * v.X + v.Y*v.Y)
+*/
+func (v *Vertex) Abs() float64 {
+	return math.Sqrt(v.X*v.X + v.Y*v.Y)
 
 }
 

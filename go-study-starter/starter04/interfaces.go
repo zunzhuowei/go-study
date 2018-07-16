@@ -1,8 +1,8 @@
 package main
 
 import (
-	"math"
 	"fmt"
+	"math"
 )
 
 /*
@@ -11,7 +11,7 @@ import (
 	接口类型的值可以存放实现这些方法的任何值。
 	注意： 列子代码的 22 行存在一个错误。 由于 Abs 只定义在 *Vertex（指针类型） 上，
 	所以 Vertex（值类型） 不满足 `Abser`。
- */
+*/
 
 //1) 定义接口
 type Abser interface {

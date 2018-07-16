@@ -10,7 +10,7 @@ import (
 switch
 	一个结构体（`struct`）就是一个字段的集合。
 	除非以 fallthrough 语句结束，否则分支会自动终止。
- */
+*/
 func main() {
 
 	fmt.Println("Go runs on")
@@ -30,16 +30,16 @@ func main() {
 
 	/*
 
-switch 的执行顺序
-	switch 的条件从上到下的执行，当匹配成功的时候停止。
-	（例如，
-	switch i {
-	case 0:
-	case f():
-	}
-	当 i==0 时不会调用 `f`。）
+	switch 的执行顺序
+		switch 的条件从上到下的执行，当匹配成功的时候停止。
+		（例如，
+		switch i {
+		case 0:
+		case f():
+		}
+		当 i==0 时不会调用 `f`。）
 
-	 */
+	*/
 	fmt.Println("When's Saturday?")
 	today := time.Now().Weekday()
 	switch time.Saturday {
@@ -57,10 +57,10 @@ switch 的执行顺序
 
 	/*
 
-没有条件的 switch
-	没有条件的 switch 同 `switch true` 一样。
-	这一构造使得可以用更清晰的形式来编写长的 if-then-else 链。
-	 */
+	没有条件的 switch
+		没有条件的 switch 同 `switch true` 一样。
+		这一构造使得可以用更清晰的形式来编写长的 if-then-else 链。
+	*/
 	t := time.Now()
 	switch {
 	case t.Hour() < 12:
@@ -69,7 +69,6 @@ switch 的执行顺序
 		fmt.Println("Godd afternoon")
 	default:
 		fmt.Println("Good evening")
-
 
 	}
 

@@ -1,9 +1,9 @@
 package main
 
 import (
-	"net/http"
-	"log"
 	"fmt"
+	"log"
+	"net/http"
 )
 
 type Hello struct{}
@@ -37,4 +37,4 @@ type Handler interface {
 
 访问 http://localhost:4000/ 会看到来自程序的问候。
 
- */
+*/

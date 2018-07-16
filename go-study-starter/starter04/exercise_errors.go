@@ -2,20 +2,18 @@ package main
 
 import "fmt"
 
-
 type ErrNegativeSqrt float64
 
-func (e ErrNegativeSqrt) Error() string{
+func (e ErrNegativeSqrt) Error() string {
 	return fmt.Sprint(float64(e))
 }
 
 func Sqrt(x float64) (float64, error) {
 	if x < 0 {
-		return -1,ErrNegativeSqrt(x)
+		return -1, ErrNegativeSqrt(x)
 	}
 	return 0, nil
 }
-
 
 func main() {
 	fmt.Println(Sqrt(2))
@@ -44,4 +42,4 @@ func (e ErrNegativeSqrt) Error() string
 
 修改 Sqrt 函数，使其接受一个负数时，返回 ErrNegativeSqrt 值。
 
- */
+*/

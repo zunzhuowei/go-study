@@ -1,12 +1,12 @@
 package main
 
 import (
-	"math"
 	"fmt"
+	"math"
 )
 
 type Vertex struct {
-	X,Y float64
+	X, Y float64
 }
 
 func (v *Vertex) Scale(f float64) {
@@ -15,7 +15,7 @@ func (v *Vertex) Scale(f float64) {
 }
 
 func (v *Vertex) Abs() float64 {
-	return math.Sqrt(v.X * v.X + v.Y * v.Y)
+	return math.Sqrt(v.X*v.X + v.Y*v.Y)
 }
 
 /*
@@ -28,12 +28,12 @@ func (v *Vertex) Abs() float64 {
 	当 v 是 Vertex 的时候 Scale 方法没有任何作用。`Scale` 修改 `v`。当 v 是一个值（非指针），
 	方法看到的是 Vertex 的副本，并且无法修改原始值。
 	Abs 的工作方式是一样的。只不过，仅仅读取 `v`。所以读取的是原始值（通过指针）还是那个值的副本并没有关系。
- */
+*/
 func main() {
 	v := &Vertex{
-		3,4,
+		3, 4,
 	}
 	v.Scale(5)
-	fmt.Println(v,v.Abs())
+	fmt.Println(v, v.Abs())
 
 }

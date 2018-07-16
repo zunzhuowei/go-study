@@ -26,9 +26,9 @@ fmt.Println(*p) // 通过指针 p 读取 i
 
 与 C 不同，Go 没有指针运算。
 
- */
+*/
 func main() {
-	i,j := 42,2701
+	i, j := 42, 2701
 
 	p := &i         // point to i
 	fmt.Println(*p) // read i through the pointer

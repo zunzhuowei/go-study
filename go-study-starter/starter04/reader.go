@@ -1,16 +1,16 @@
 package main
 
 import (
-	"strings"
 	"fmt"
 	"io"
+	"strings"
 )
 
 func main() {
 
 	r := strings.NewReader("Hello, Reader!")
 
-	b := make([] byte, 8)
+	b := make([]byte, 8)
 
 	for {
 		n, err := r.Read(b)
@@ -31,4 +31,4 @@ Readers
 	func (T) Read(b []byte) (n int, err error)
 	Read 用数据填充指定的字节 slice，并且返回填充的字节数和错误信息。 在遇到数据流结尾时，返回 io.EOF 错误。
 	例子代码创建了一个 strings.Reader。 并且以每次 8 字节的速度读取它的输出。
- */
+*/

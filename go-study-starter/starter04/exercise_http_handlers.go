@@ -1,8 +1,9 @@
 package main
 
 import (
-	"net/http"
+	"fmt"
 	"log"
+	"net/http"
 )
 
 type String string
@@ -13,31 +14,26 @@ type Struct struct {
 	Who     string
 }
 
-type Handler struct {
-	String
-	Struct
-}
-
 func (h String) ServeHTTP(w http.ResponseWriter, r *http.Request) {
-	http.Handle("/string", String("I'm a frayed knot."))
+	fmt.Fprintf(w, string(h))
 }
 
 func (h Struct) ServeHTTP(w http.ResponseWriter, r *http.Request) {
-	http.Handle("/struct", &Struct{"Hello", ":", "Gophers!"})
+	fmt.Fprintf(w, h.Geeting+" - "+h.Punct+" - "+h.Who)
 }
 
-func (h Handler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
-	http.Handle("/string", String("I'm a frayed knot."))
-	http.Handle("/struct", &Struct{"Hello", ":", "Gophers!"})
+func hello(w http.ResponseWriter, r *http.Request) {
+	fmt.Println("hello")
+	fmt.Fprintf(w, "hello")
 }
 
 func main() {
 
-	//var stri String
-	//var stru Struct
-	var handler Handler
+	http.Handle("/string", String("I'm a frayed knot."))
+	http.Handle("/struct", &Struct{"Hello", ":", "Gophers!"})
 
-	err := http.ListenAndServe("localhost:4000", handler)
+	http.HandleFunc("/", hello)
+	err := http.ListenAndServe(":4000", nil)
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -64,4 +60,4 @@ http.Handle("/string", String("I'm a frayed knot."))
 http.Handle("/struct", &Struct{"Hello", ":", "Gophers!"})
 
 
- */
+*/

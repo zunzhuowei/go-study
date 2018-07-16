@@ -2,8 +2,8 @@ package main
 
 import "fmt"
 
-func printSlice(s string, x [] int) {
-	fmt.Printf("%s len = %d cap = %d %v\n",s,len(x),cap(x), x)
+func printSlice(s string, x []int) {
+	fmt.Printf("%s len = %d cap = %d %v\n", s, len(x), cap(x), x)
 
 }
 
@@ -14,14 +14,14 @@ func printSlice(s string, x [] int) {
 	b := make([]int, 0, 5) // len(b)=0, cap(b)=5
 	b = b[:cap(b)] // len(b)=5, cap(b)=5
 	b = b[1:]      // len(b)=4, cap(b)=4
- */
+*/
 func main() {
 	a := make([]int, 5)
 	printSlice("a", a)
 
 	fmt.Println("---------------")
 
-	b := make([]int,0, 5)
+	b := make([]int, 0, 5)
 	printSlice("b", b)
 
 	fmt.Println("---------------")
@@ -35,10 +35,10 @@ func main() {
 	fmt.Println("+++++++++++++++++++++++")
 
 	/*
-	nil slice
-		slice 的零值是 `nil`。
-		一个 nil 的 slice 的长度和容量是 0。
-	 */
+		nil slice
+			slice 的零值是 `nil`。
+			一个 nil 的 slice 的长度和容量是 0。
+	*/
 	var z []int
 	fmt.Println(z, len(z), cap(z))
 	if z == nil {

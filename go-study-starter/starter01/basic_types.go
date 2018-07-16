@@ -1,8 +1,8 @@
 package main
 
 import (
-	"math/cmplx"
 	"fmt"
+	"math/cmplx"
 )
 
 /*
@@ -23,7 +23,7 @@ float32 float64
 complex64 complex128
 这个例子演示了具有不同类型的变量。
 同时与导入语句一样，变量的定义“打包”在一个语法块中。
- */
+*/
 var (
 	ToBe   bool       = false
 	MaxInt uint64     = 1<<64 - 1

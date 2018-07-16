@@ -15,7 +15,7 @@ func printSlice(s string, x []int) {
 	append 的结果是一个包含原 slice 所有元素加上新添加的元素的 slice。
 	如果 s 的底层数组太小，而不能容纳所有值时，会分配一个更大的数组。 返回的 slice 会指向这个新分配的数组。
 	（了解更多关于 slice 的内容，参阅文章slice：使用和内幕。）
- */
+*/
 func main() {
 	var a []int
 	printSlice("a", a)

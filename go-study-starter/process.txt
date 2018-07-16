@@ -6,3 +6,6 @@
 
 3）进度——2018年7月16日18:12:51
     http://tour.studygolang.com/methods/14
+
+4) 进度——2018年7月16日23:50:44
+    http://tour.studygolang.com/concurrency/5

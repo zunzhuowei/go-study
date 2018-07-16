@@ -8,7 +8,7 @@ import "fmt"
 一个未指定类型的常量由上下文来决定其类型。
 
 也尝试一下输出 needInt(Big) 吧。
- */
+*/
 
 const (
 	Big   = 1 << 100
