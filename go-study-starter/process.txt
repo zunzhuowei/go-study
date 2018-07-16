@@ -3,3 +3,6 @@
 
 2）进度——2018年7月13日18:10:01
     http://tour.studygolang.com/moretypes/13
+
+3）进度——2018年7月16日18:12:51
+    http://tour.studygolang.com/methods/14
