@@ -9,3 +9,9 @@
 
 4) 进度——2018年7月16日23:50:44
     http://tour.studygolang.com/concurrency/5
+
+-------------------
+
+5) 进度——2018年12月23日00:52:36
+    go-study-review begin
+    http://tour.studygolang.com/basics/1
