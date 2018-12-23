@@ -15,3 +15,6 @@
 5) 进度——2018年12月23日00:52:36
     go-study-review begin
     http://tour.studygolang.com/basics/1
+
+6) 进度——2018年12月23日22:29:51
+    http://tour.studygolang.com/basics/11
